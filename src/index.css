@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.Container{
+    margin: 30px;
+   text-align: center;
+    /* margin: auto;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: rgb(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px; */
 }
+.child{
+    margin: auto;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: rgb(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+}
+button{
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+ 
+  color: #FFFFFF;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+ 
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+
+
+    margin: 10px;
+
+
+}
+.inputbox{
+    
+    
+    border-radius: 5px;
+   
+    border: 1px solid rgb(181, 189, 196);
+  
+    color: rgb(8, 9, 10);
+    box-shadow: none;
+    :focus{
+        background-color: #fff;
+        border-color: #3b49df;
+        box-shadow: 1px 1px 0 #3b49df;
+    }
+    margin: 10px;
+    
+    
 }

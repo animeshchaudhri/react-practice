@@ -1,25 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
-function App() {
+export default function App() {
+
+  const [count, setcount] = useState(0);
+  const [a, seta] = useState('');
+  const [b, setb] = useState('');
+
+
+ const handlechange = function(event){
+  seta(event.target.value)
+ }
+
+  function add() {
+    const num1 = parseFloat(a);
+    const num2 = parseFloat(b);
+    setcount(num1 + num2);
+  }
+  function sub() {
+    const num1 = parseFloat(a);
+    const num2 = parseFloat(b);
+    setcount(num1 - num2);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='Container'>
+      <div className='child'>
+        <form>
+          <input className='inputbox' type='number' value={a}
+          onChange={handlechange}/>
+          <input  className='inputbox' type='number' value={b}
+            onChange={(b) =>
+              setb(b.target.value)
+            }
+
+
+          />
+
+
+          <p>{count}</p>
+        </form>
+        <button onClick={add}>add</button>
+        <button onClick={sub}>sub</button>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
